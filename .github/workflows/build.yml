@@ -31,7 +31,7 @@ jobs:
       - name: Run Snyk
         uses: snyk/actions/node@master
         env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+          SNYK_TOKEN: ${{ env.SNYK_TOKEN }}
       - name: Install, build, test
         run: |
           make install
